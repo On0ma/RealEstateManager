@@ -1,3 +1,53 @@
 <resources>
     <string name="app_name">Real Estate Manager</string>
+    <string name="mapbox_access_token" translatable="false">pk.eyJ1IjoiZW56by1vIiwiYSI6ImNsNTl3c3N3aDEzcmwzZG5zc2J6eGlsMGIifQ.ukP47h-0lgGwCsWKs2aXsg</string>
+    <string name="property_add_type_title">Ajouter un bien immobilier</string>
+    <string name="property_add_type_label">Type de bien</string>
+    <string name="property_add_price_label">Prix</string>
+    <string name="property_add_size_label">Taille</string>
+    <string name="property_add_rooms_label">Pièces</string>
+    <string name="property_add_description_label">Description</string>
+    <string name="property_add_address_label">Adresse</string>
+    <string name="property_add_status_label">Status</string>
+    <string name="property_add_seller_label">Vendeur</string>
+    <string name="property_add_school_label">Ecole</string>
+    <string name="property_add_market_label">Supermarché</string>
+    <string name="property_add_photos_label">Photos</string>
+    <string name="property_add_photo_button">Ajouter une photo</string>
+    <string name="property_add_date_added_label">Date d\'ajout</string>
+    <string name="property_add_date_sold_label">Date de vente</string>
+    <string name="property_add_button">Ajouter un Bien</string>
+    <string name="loan_title">Calculer un prêt immobilier</string>
+    <string name="loan_amount_label">Montant emprunté</string>
+    <string name="loan_interest_label">Taux d\'intérêt annuel (en %)</string>
+    <string name="loan_length_label">Durée de remboursement (en mois)</string>
+    <string name="loan_button">Calculer</string>
+    <string name="loan_result_label">Montant mensuel</string>
+    <string name="search_title">Chercher un bien</string>
+    <string name="search_price_minimum_label">Prix minimum</string>
+    <string name="search_price_maximum_label">Prix maximum</string>
+    <string name="search_size_minimum_label">Superficie minimum</string>
+    <string name="search_size_maximum_label">Superficie maximum</string>
+    <string name="search_rooms_label">Nombre de pièces</string>
+    <string name="search_type_label">Type de bien</string>
+    <string name="search_address_label">Adresse</string>
+    <string name="search_school_label">Ecole</string>
+    <string name="search_market_label">Supermarché</string>
+    <string name="search_button">Chercher</string>
+    <string name="fragment_list_no_properties">Aucun bien immobilier</string>
+    <string name="map_reset_location">Centrer la carte sur ma position</string>
+    <string name="property_price_title">Prix</string>
+    <string name="property_media_title">Photos</string>
+    <string name="property_description_title">Description</string>
+    <string name="property_location_title">Adresse</string>
+    <string name="property_surface_title">Surface</string>
+    <string name="property_rooms_title">Nombre de pièces</string>
+    <string name="property_date_added_title">Date d\'ajout</string>
+    <string name="poi_title">Points d\'intérêt</string>
+    <string name="nav_list">Liste</string>
+    <string name="nav_map">Carte</string>
+    <string name="nav_add">Ajouter un bien</string>
+    <string name="nav_search">Rechercher un bien</string>
+    <string name="loan_nav">Calculer un prêt immobilier</string>
+
 </resources>

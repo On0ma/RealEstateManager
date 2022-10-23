@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_list"
+        android:enabled="true"
+        android:icon="@drawable/view_list"
+        android:title="@string/nav_list"/>
+    <item
+        android:id="@+id/nav_map"
+        android:enabled="true"
+        android:icon="@drawable/map"
+        android:title="@string/nav_map"/>
+</menu>
