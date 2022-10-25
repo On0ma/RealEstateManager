@@ -4,6 +4,7 @@ import static com.openclassrooms.realestatemanager.Utils.getLocationFromAddress;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -85,6 +86,7 @@ public class PropertyDetailsFragment extends Fragment {
 
         LatLng propertyLocation = getLocationFromAddress(getActivity(), property.getAddress());
 
+        if (propertyLocation != null) {
         MapboxStaticMap staticMap = MapboxStaticMap.builder()
                 .accessToken(getString(R.string.mapbox_access_token))
                 .styleId(StaticMapCriteria.STREET_STYLE)
@@ -98,7 +100,9 @@ public class PropertyDetailsFragment extends Fragment {
         Glide.with(this)
                 .load(staticMapUrl)
                 .into(binding.staticMapImage);
-
+        } else {
+            binding.staticMapImage.setVisibility(View.GONE);
+        }
         return view;
     }
 }

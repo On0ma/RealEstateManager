@@ -93,14 +93,16 @@ public class MapFragment extends Fragment {
 
         for (Property property : properties) {
             LatLng propertyLoc = getLocationFromAddress(getActivity(), property.getAddress());
-            JsonElement json = gson.toJsonTree(property);
-            PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
-                    .withIconImage(icon)
-                    .withTextSize(12.00)
-                    .withData(json)
-                    .withTextOffset(textOffset)
-                    .withPoint(Point.fromLngLat(propertyLoc.longitude, propertyLoc.latitude));
-            pointAnnotationManager.create(pointAnnotationOptions);
+            if (propertyLoc != null) {
+                JsonElement json = gson.toJsonTree(property);
+                PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
+                        .withIconImage(icon)
+                        .withTextSize(12.00)
+                        .withData(json)
+                        .withTextOffset(textOffset)
+                        .withPoint(Point.fromLngLat(propertyLoc.longitude, propertyLoc.latitude));
+                pointAnnotationManager.create(pointAnnotationOptions);
+            }
         }
 
         pointAnnotationManager.addClickListener(new OnPointAnnotationClickListener() {
