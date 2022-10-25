@@ -3,9 +3,9 @@
     package="com.openclassrooms.realestatemanager">
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-feature
@@ -19,10 +19,9 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE"/>
-
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -31,7 +30,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
-        <activity android:name="com.openclassrooms.realestatemanager.ui.MainActivity"
+        <provider
+            android:name=".ui.RealEstateManagerContentProvider"
+            android:authorities="com.openclassrooms.realestatemanager.provider"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,26 +45,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ui.LoanActivity"
+        <activity
+            android:name=".ui.LoanActivity"
             android:exported="true"
-            android:parentActivityName=".ui.MainActivity"/>
-
-        <activity android:name=".ui.AddPropertyActivity"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.AddPropertyActivity"
             android:exported="true"
-            android:parentActivityName=".ui.MainActivity"/>
-
-        <activity android:name=".ui.PropertyActivity"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.PropertyActivity"
             android:exported="true"
-            android:parentActivityName=".ui.MainActivity"/>
-
-        <activity android:name=".ui.SearchActivty"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.SearchActivty"
             android:exported="true"
-            android:parentActivityName=".ui.MainActivity"/>
-
-        <activity android:name=".ui.SearchResultsActivity"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.SearchResultsActivity"
             android:exported="true"
-            android:parentActivityName=".ui.SearchActivty"/>
+            android:parentActivityName=".ui.SearchActivty" />
     </application>
 
 </manifest>

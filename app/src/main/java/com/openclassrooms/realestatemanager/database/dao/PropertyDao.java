@@ -1,5 +1,7 @@
 package com.openclassrooms.realestatemanager.database.dao;
 
+import android.database.Cursor;
+
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
@@ -16,6 +18,9 @@ import java.util.List;
 public interface PropertyDao {
     @Query("SELECT * FROM Property")
     List<Property> getAllProperties();
+
+    @Query("SELECT * FROM Property")
+    Cursor selectAllProperties();
 
     @Query("SELECT * FROM Property WHERE id = :propertyId")
     Property getProperty(long propertyId);
